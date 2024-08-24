@@ -507,7 +507,7 @@ country.innerHTML = `<option value="">Select type</option>`
         console.log(shoeProduct[key][key1]);
     var obj = shoeProduct[key][key1]
 
-    main.innerHTML +=` <div class="card text-center" style="width: 18rem;">
+    main.innerHTML +=` <div class="card text-center m-auto" style="width: 18rem;">
             <img src="${obj.img}" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">${obj.productName}</h5>
@@ -555,8 +555,8 @@ var selectedCard = document.getElementById("selectedCard")
     var userVal = shoeProduct[brand.value][country.value]
 
 
-    selectedCard.innerHTML = `<div class="card text-center" style="width: 18rem;">
-            <img src="./download.jfif" class="card-img-top" alt="...">
+    selectedCard.innerHTML = `<div class="card text-center m-auto" style="width: 18rem;">
+            <img src="${obj.img}" class="card-img-top " alt="...">
             <div class="card-body">
               <h5 class="card-title">${userVal.productName}</h5>
               <p class="card-text">${userVal.price}</p>
