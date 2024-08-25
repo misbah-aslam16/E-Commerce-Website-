@@ -486,10 +486,10 @@ var shoeProduct = {
 
 
 var main = document.querySelector("#main")
-  var brand = document.querySelector("#brand")
-  var country = document.querySelector("#country")
+var brand = document.querySelector("#brand")
+var country = document.querySelector("#country")
 
-  brand.innerHTML = `<option value="">Select Brand </option>`
+brand.innerHTML = `<option value="">Select Brand </option>`
 
 country.innerHTML = `<option value="">Select type</option>`
 
@@ -497,17 +497,17 @@ country.innerHTML = `<option value="">Select type</option>`
 
 
 
-  for(var key in shoeProduct){
+for (var key in shoeProduct) {
 
     brand.innerHTML += `<option value="${key}">${key}</option>`
-    for(var key1 in shoeProduct[key]){
+    for (var key1 in shoeProduct[key]) {
 
 
 
         console.log(shoeProduct[key][key1]);
-    var obj = shoeProduct[key][key1]
+        var obj = shoeProduct[key][key1]
 
-    main.innerHTML +=` <div class="card text-center m-auto" style="width: 18rem;">
+        main.innerHTML += ` <div class="card text-center m-auto" style="width: 18rem;">
             <img src="${obj.img}" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">${obj.productName}</h5>
@@ -520,14 +520,14 @@ country.innerHTML = `<option value="">Select type</option>`
           </div>`
 
 
-          }
+    }
 
 
 
-  }
+}
 
 
-  function changedanger(event, color) {
+function changedanger(event, color) {
     event.preventDefault(); // Prevent default link behavior
     const target = event.target;
     const card = target.closest('.card'); // Find the closest parent element with the class 'card'
@@ -535,21 +535,21 @@ country.innerHTML = `<option value="">Select type</option>`
         card.style.backgroundColor = color;
     }
 }
-  
 
 
-  function setType(){
+
+function setType() {
     country.innerHTML = ""
-    country.innerHTML =`<option value ="">select type </option>`
-for(var key in shoeProduct[brand.value]){
-  country.innerHTML +=`<option value ="${key}">${key} </option>`
+    country.innerHTML = `<option value ="">select type </option>`
+    for (var key in shoeProduct[brand.value]) {
+        country.innerHTML += `<option value ="${key}">${key} </option>`
+
+    }
 
 }
 
-  }
-
 var selectedCard = document.getElementById("selectedCard")
-  function searchProduct(){
+function searchProduct() {
     // console.log(makeupProduct[brand.value][country.value]);
 
     var userVal = shoeProduct[brand.value][country.value]
@@ -560,21 +560,21 @@ var selectedCard = document.getElementById("selectedCard")
             <div class="card-body">
               <h5 class="card-title">${userVal.productName}</h5>
               <p class="card-text">${userVal.price}</p>
-              <a href="#" class="btn btn-secondary">Order Now</a>
+              <a href="#" class="btn btn-secondary">Order Now</a><br>
               <a href="#" class="btn btn-danger" onclick="changedanger(event,'red')"></a>
               <a href="#" class="btn btn-success" onclick="changedanger(event,'green')"></a>
               <a href="#" class="btn btn-primary" onclick="changedanger(event,'blue')"></a>
             </div>
           </div>`
-             main.style.display = 'none'
+    main.style.display = 'none'
 
 
 
-  }
-  function clearProduct (){
-    selectedCard.style.display ='none'
-    main.style.display= "flex"
-  }
+}
+function clearProduct() {
+    selectedCard.style.display = 'none'
+    main.style.display = "flex"
+}
 // const Nike = {
 //     img: "./images/Nike ZoomX.jpg",
 //     productName: "Air Max",
