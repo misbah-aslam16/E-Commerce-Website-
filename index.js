@@ -556,7 +556,7 @@ function searchProduct() {
 
 
     selectedCard.innerHTML = `<div class="card text-center m-auto" style="width: 18rem;">
-            <img src="${obj.img}" class="card-img-top " alt="...">
+            <img src="${userVal.img}" class="card-img-top " alt="...">
             <div class="card-body">
               <h5 class="card-title">${userVal.productName}</h5>
               <p class="card-text">${userVal.price}</p>

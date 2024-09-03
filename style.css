@@ -1,0 +1,15 @@
+ *{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+ }
+ .myCrad{
+    display: flex;
+    align-items: center;
+}
+
+.carousel{
+    height: 650px;
+    width: 80%;
+    margin-bottom: 60px;
+}
